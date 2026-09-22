@@ -17,34 +17,42 @@ fonts_dir: "fonts"
 # Styles configuration
 # Each style maps: en_font (English), cn_font (CJK), display_name (metadata)
 styles:
+  Light:
+    en_font: "JetBrainsMonoNLNerdFontMono-Light.ttf"
+    cn_font: "LXGWWenKaiMonoLite-Light.ttf"
+    display_name: "Light"
+  LightItalic:
+    en_font: "JetBrainsMonoNLNerdFontMono-LightItalic.ttf"
+    cn_font: "LXGWWenKaiMonoLite-Light.ttf"
+    display_name: "Light Italic"
   Regular:
     en_font: "JetBrainsMonoNLNerdFontMono-Regular.ttf"
-    cn_font: "LXGWWenKaiMonoGBScreen.ttf"
+    cn_font: "LXGWWenKaiMonoLite-Regular.ttf"
     display_name: "Regular"
   Italic:
     en_font: "JetBrainsMonoNLNerdFontMono-Italic.ttf"
-    cn_font: "LXGWWenKaiMonoGBScreen.ttf"
+    cn_font: "LXGWWenKaiMonoLite-Regular.ttf"
     display_name: "Italic"
   Medium:
     en_font: "JetBrainsMonoNLNerdFontMono-Medium.ttf"
-    cn_font: "LXGWWenKaiMonoGBScreen.ttf"
+    cn_font: "LXGWWenKaiMonoLite-Medium.ttf"
     display_name: "Medium"
   MediumItalic:
     en_font: "JetBrainsMonoNLNerdFontMono-MediumItalic.ttf"
-    cn_font: "LXGWWenKaiMonoGBScreen.ttf"
+    cn_font: "LXGWWenKaiMonoLite-Medium.ttf"
     display_name: "Medium Italic"
   Bold:
-    en_font: "JetBrainsMonoNLNerdFontMono-Bold.ttf"
+    en_font: "JetBrainsMonoNLNerdFontMono-SemiBold.ttf"
     cn_font: "LXGWZhenKaiGB-Regular.ttf"
     display_name: "Bold"
   BoldItalic:
-    en_font: "JetBrainsMonoNLNerdFontMono-BoldItalic.ttf"
+    en_font: "JetBrainsMonoNLNerdFontMono-SemiBoldItalic.ttf"
     cn_font: "LXGWZhenKaiGB-Regular.ttf"
     display_name: "Bold Italic"
 
 # Build options
 build:
-  styles: "Regular,Medium,Italic,MediumItalic,Bold,BoldItalic"  # Comma-separated
+  styles: "Light,Regular,Medium,Bold,Italic,LightItalic,MediumItalic,BoldItalic"  # Comma-separated
   output_dir: "output/fonts"
   parallel: 6  # Number of parallel workers
 
