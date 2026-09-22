@@ -7,12 +7,12 @@ JetBrains Mono NerdFont + LXGW WenKai Mono = 2:1 中英文等宽字体
 ## 特性
 
 - 英文字符来自 JetBrains Mono NerdFont
-- 中日韩 (CJK) 字符来自霞鹜文楷屏幕阅读版等宽 GB (Regular/Medium) 和霞鹜臻楷 GB (Bold)
+- 中日韩 (CJK) 字符来自霞鹜文楷轻便版等宽 (Light/Regular/Medium) 和霞鹜臻楷 GB (Bold)
 - 保留 NerdFont 图标并缩放至与中文等宽
   - Powerline 符号 (U+E0A0-U+E0DF) 保持原始垂直边界, 确保终端中正确对齐
   - 普通图标缩放 1.4 倍并垂直居中
 - 完美 2:1 宽度比例 (中文 1200, 英文 600 FUnit)
-- 字重: Regular, Medium, Italic, MediumItalic, Bold, BoldItalic
+- 字重: Light, Regular, Medium, Bold, 每个字重均有对应斜体 (共 8 个样式)
 - 支持 YAML 配置文件, 可通过命令行覆盖
 - 支持多字重中文字体映射 (可选)
 
@@ -31,12 +31,12 @@ JetBrains Mono NerdFont + LXGW WenKai Mono = 2:1 中英文等宽字体
 #### `JetBrainsLxgwNerdMono.zip`
 > **推荐大多数用户下载**
 
-包含 6 个字重的完整 TTF 字体文件, 适用于:
+包含 8 个字重的完整 TTF 字体文件, 适用于:
 - ✅ VSCode / JetBrains IDE / Sublime Text 等编辑器
 - ✅ Windows Terminal / iTerm2 / Alacritty 等终端
 - ✅ 系统全局安装
 
-包含字重: Regular, Medium, Italic, MediumItalic, Bold, BoldItalic
+包含字重: Light, Regular, Medium, Bold 及对应斜体 (共 8 个文件)
 
 #### `JetBrainsLxgwNerdMono-split-woff2.zip`
 > **Web 开发者专用**
@@ -54,10 +54,12 @@ JetBrains Mono NerdFont + LXGW WenKai Mono = 2:1 中英文等宽字体
 
 | 文件名 | 字重 | 适用场景 |
 |-------|------|---------|
+| `JetBrainsLxgwNerdMono-Light.ttf` | 细体 | 偏好较细字体 |
 | `JetBrainsLxgwNerdMono-Regular.ttf` | 常规 | 日常编码 (推荐) |
 | `JetBrainsLxgwNerdMono-Medium.ttf` | 中等 | 偏好稍粗字体 |
 | `JetBrainsLxgwNerdMono-Bold.ttf` | 粗体 | 标题/强调 |
 | `JetBrainsLxgwNerdMono-Italic.ttf` | 斜体 | 注释/变量 |
+| `JetBrainsLxgwNerdMono-LightItalic.ttf` | 细斜体 | - |
 | `JetBrainsLxgwNerdMono-MediumItalic.ttf` | 中等斜体 | - |
 | `JetBrainsLxgwNerdMono-BoldItalic.ttf` | 粗斜体 | - |
 
@@ -104,18 +106,22 @@ docker run --rm \
 
 从 [Nerd Fonts 发布页面](https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/JetBrainsMono.zip) 下载,解压后放置以下文件:
 
+- `JetBrainsMonoNLNerdFontMono-Light.ttf`
+- `JetBrainsMonoNLNerdFontMono-LightItalic.ttf`
 - `JetBrainsMonoNLNerdFontMono-Regular.ttf`
-- `JetBrainsMonoNLNerdFontMono-Medium.ttf`
 - `JetBrainsMonoNLNerdFontMono-Italic.ttf`
+- `JetBrainsMonoNLNerdFontMono-Medium.ttf`
 - `JetBrainsMonoNLNerdFontMono-MediumItalic.ttf`
 - `JetBrainsMonoNLNerdFontMono-Bold.ttf`
 - `JetBrainsMonoNLNerdFontMono-BoldItalic.ttf`
 
-### 霞鹜文楷屏幕阅读版等宽 GB (v1.521)
+### 霞鹜文楷轻便版等宽 (LXGW WenKai Mono Lite)
 
-直接下载: [LXGWWenKaiMonoGBScreen.ttf](https://github.com/lxgw/LxgwWenKai-Screen/releases/download/v1.521/LXGWWenKaiMonoGBScreen.ttf)
+从 [LxgwWenKai-Lite 发布页面](https://github.com/lxgw/LxgwWenKai-Lite/releases) 下载,解压后放置以下文件:
 
-- `LXGWWenKaiMonoGBScreen.ttf` - 用于 Regular/Italic/Medium/MediumItalic 字重
+- `LXGWWenKaiMonoLite-Light.ttf` - 用于 Light/LightItalic 字重
+- `LXGWWenKaiMonoLite-Regular.ttf` - 用于 Regular/Italic 字重
+- `LXGWWenKaiMonoLite-Medium.ttf` - 用于 Medium/MediumItalic 字重
 
 ### 霞鹜臻楷 GB (用于 Bold 字重)
 
@@ -225,13 +231,13 @@ fonts_dir: "fonts"
 styles:
   Regular:
     en_font: "JetBrainsMonoNLNerdFontMono-Regular.ttf"
-    cn_font: "LXGWWenKaiMonoGBScreen.ttf"
+    cn_font: "LXGWWenKaiMonoLite-Regular.ttf"
     display_name: "Regular"
   # ... 其他字重
 
 # 构建选项
 build:
-  styles: "Regular,Medium,Italic,MediumItalic,Bold,BoldItalic"
+  styles: "Light,Regular,Medium,Bold,Italic,LightItalic,MediumItalic,BoldItalic"
   output_dir: "output/fonts"
   parallel: 6
 
@@ -299,7 +305,7 @@ styles:
 
 - [maple-font](https://github.com/subframe7536/maple-font): 本项目的实现方案参考来源
 - [Nerd Fonts](https://github.com/ryanoasis/nerd-fonts): 提供了丰富的开发者图标
-- [霞鹜文楷](https://github.com/lxgw/LxgwWenKai): 优秀的开源中文字体
+- [霞鹜文楷轻便版](https://github.com/lxgw/LxgwWenKai-Lite): Light/Regular/Medium 字重的源中文字体
 - [霞鹜臻楷](https://github.com/lxgw/LxgwZhenKai): 霞鹜文楷的粗体版本
 - [JetBrains Mono](https://github.com/JetBrains/JetBrainsMono): 优秀的编程等宽字体
 - [cn-font-split](https://github.com/KonghaYao/cn-font-split): 强大的 Web 字体分包工具

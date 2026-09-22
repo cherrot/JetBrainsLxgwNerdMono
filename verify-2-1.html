@@ -180,10 +180,14 @@
         // Fallback mode when manifest is not available
         function fallbackMode() {
             const defaultFonts = [
+                { style: 'Light', display_name: 'Light' },
+                { style: 'LightItalic', display_name: 'Light Italic' },
                 { style: 'Regular', display_name: 'Regular' },
                 { style: 'Medium', display_name: 'Medium' },
                 { style: 'Italic', display_name: 'Italic' },
-                { style: 'MediumItalic', display_name: 'Medium Italic' }
+                { style: 'MediumItalic', display_name: 'Medium Italic' },
+                { style: 'Bold', display_name: 'Bold' },
+                { style: 'BoldItalic', display_name: 'Bold Italic' }
             ];
 
             const familyName = 'JetBrainsLxgwNerdMono';

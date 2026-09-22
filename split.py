@@ -17,6 +17,8 @@ logger = logging.getLogger(__name__)
 
 # Mapping from style key to display name for local() matching
 STYLE_DISPLAY_NAMES = {
+    "Light": "Light",
+    "LightItalic": "Light Italic",
     "Regular": "Regular",
     "Medium": "Medium",
     "Italic": "Italic",
@@ -26,7 +28,7 @@ STYLE_DISPLAY_NAMES = {
 }
 
 # All supported style keys, sorted by length descending for matching
-STYLE_KEYS = ["MediumItalic", "BoldItalic", "Medium", "Italic", "Bold", "Regular"]
+STYLE_KEYS = ["MediumItalic", "LightItalic", "BoldItalic", "Regular", "Medium", "Italic", "Light", "Bold"]
 
 
 def check_cn_font_split_installed() -> bool:
@@ -114,6 +116,8 @@ def split_font(
             font_weight = "700"
         elif "Medium" in style_key:
             font_weight = "500"
+        elif "Light" in style_key:
+            font_weight = "300"
         if "Italic" in style_key:
             font_style = "italic"
 

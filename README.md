@@ -7,12 +7,12 @@ JetBrains Mono NerdFont + LXGW WenKai Mono = 2:1 CJK Monospace Font
 ## Features
 
 - English characters from JetBrains Mono NerdFont
-- CJK characters from LXGW WenKai Mono GB Screen (Regular/Medium) and LXGW ZhenKai GB (Bold)
+- CJK characters from LXGW WenKai Mono Lite (Light/Regular/Medium) and LXGW ZhenKai GB (Bold)
 - NerdFont icons preserved and scaled to match CJK width
   - Powerline symbols (U+E0A0-U+E0DF) maintain original vertical bounds for proper terminal alignment
   - Regular icons scaled 1.4x and vertically centered
 - Perfect 2:1 width ratio (CJK 1200, English 600 FUnit)
-- Styles: Regular, Medium, Italic, MediumItalic, Bold, BoldItalic
+- Styles: Light, Regular, Medium, Bold, each with an italic variant (8 styles total)
 - YAML configuration support with CLI override
 - Multi-weight Chinese font mapping (optional)
 
@@ -31,12 +31,12 @@ JetBrains Mono NerdFont + LXGW WenKai Mono = 2:1 CJK Monospace Font
 #### `JetBrainsLxgwNerdMono.zip`
 > **Recommended for most users**
 
-Contains 6 complete TTF font files with all weights, suitable for:
+Contains 8 complete TTF font files with all weights, suitable for:
 - ✅ VSCode / JetBrains IDE / Sublime Text and other editors
 - ✅ Windows Terminal / iTerm2 / Alacritty and other terminals
 - ✅ System-wide installation
 
-Included weights: Regular, Medium, Italic, MediumItalic, Bold, BoldItalic
+Included weights: Light, Regular, Medium, Bold and their italic variants (8 files)
 
 #### `JetBrainsLxgwNerdMono-split-woff2.zip`
 > **For Web developers**
@@ -54,10 +54,12 @@ If you only need a specific weight, download the corresponding file directly:
 
 | File | Weight | Use Case |
 |------|--------|----------|
+| `JetBrainsLxgwNerdMono-Light.ttf` | Light | Prefer lighter font |
 | `JetBrainsLxgwNerdMono-Regular.ttf` | Regular | Daily coding (Recommended) |
 | `JetBrainsLxgwNerdMono-Medium.ttf` | Medium | Prefer slightly bolder font |
 | `JetBrainsLxgwNerdMono-Bold.ttf` | Bold | Headings/emphasis |
 | `JetBrainsLxgwNerdMono-Italic.ttf` | Italic | Comments/variables |
+| `JetBrainsLxgwNerdMono-LightItalic.ttf` | Light Italic | - |
 | `JetBrainsLxgwNerdMono-MediumItalic.ttf` | Medium Italic | - |
 | `JetBrainsLxgwNerdMono-BoldItalic.ttf` | Bold Italic | - |
 
@@ -104,18 +106,22 @@ Place the following fonts in the `fonts/` directory:
 
 Download from [Nerd Fonts release](https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/JetBrainsMono.zip), extract and place these files:
 
+- `JetBrainsMonoNLNerdFontMono-Light.ttf`
+- `JetBrainsMonoNLNerdFontMono-LightItalic.ttf`
 - `JetBrainsMonoNLNerdFontMono-Regular.ttf`
-- `JetBrainsMonoNLNerdFontMono-Medium.ttf`
 - `JetBrainsMonoNLNerdFontMono-Italic.ttf`
+- `JetBrainsMonoNLNerdFontMono-Medium.ttf`
 - `JetBrainsMonoNLNerdFontMono-MediumItalic.ttf`
 - `JetBrainsMonoNLNerdFontMono-Bold.ttf`
 - `JetBrainsMonoNLNerdFontMono-BoldItalic.ttf`
 
-### LXGW WenKai Mono GB Screen (v1.521)
+### LXGW WenKai Mono Lite
 
-Download directly: [LXGWWenKaiMonoGBScreen.ttf](https://github.com/lxgw/LxgwWenKai-Screen/releases/download/v1.521/LXGWWenKaiMonoGBScreen.ttf)
+Download from [LxgwWenKai-Lite releases](https://github.com/lxgw/LxgwWenKai-Lite/releases), extract and place these files:
 
-- `LXGWWenKaiMonoGBScreen.ttf` - Used for Regular/Italic/Medium/MediumItalic styles
+- `LXGWWenKaiMonoLite-Light.ttf` - Used for Light/LightItalic styles
+- `LXGWWenKaiMonoLite-Regular.ttf` - Used for Regular/Italic styles
+- `LXGWWenKaiMonoLite-Medium.ttf` - Used for Medium/MediumItalic styles
 
 ### LXGW ZhenKai GB (for Bold weights)
 
@@ -225,13 +231,13 @@ fonts_dir: "fonts"
 styles:
   Regular:
     en_font: "JetBrainsMonoNLNerdFontMono-Regular.ttf"
-    cn_font: "LXGWWenKaiMonoGBScreen.ttf"
+    cn_font: "LXGWWenKaiMonoLite-Regular.ttf"
     display_name: "Regular"
   # ... other styles
 
 # Build options
 build:
-  styles: "Regular,Medium,Italic,MediumItalic,Bold,BoldItalic"
+  styles: "Light,Regular,Medium,Bold,Italic,LightItalic,MediumItalic,BoldItalic"
   output_dir: "output/fonts"
   parallel: 6
 
@@ -299,7 +305,7 @@ options:
 
 - [maple-font](https://github.com/subframe7536/maple-font): Implementation reference and inspiration
 - [Nerd Fonts](https://github.com/ryanoasis/nerd-fonts): Developer icons
-- [LXGW WenKai](https://github.com/lxgw/LxgwWenKai): Source CJK font for Regular/Medium weights
+- [LXGW WenKai Lite](https://github.com/lxgw/LxgwWenKai-Lite): Source CJK font for Light/Regular/Medium weights
 - [LXGW ZhenKai](https://github.com/lxgw/LxgwZhenKai): Source CJK font for Bold weights
 - [JetBrains Mono](https://github.com/JetBrains/JetBrainsMono): Source English font
 - [cn-font-split](https://github.com/KonghaYao/cn-font-split): Web font splitting tool
